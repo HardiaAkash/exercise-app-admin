@@ -108,7 +108,7 @@ const Feedback = () => {
                   allData?.feedback?.map((items, index) => (
                     <tr key={index}>
                       <td className="text-[14px] font-[400] py-3 px-5">
-                        {index + 1}
+                        {(index + 1 )+ (10*(allData?.pagination?.currentPage-1))}
                       </td>
                       <td className="text-[14px] font-[400] py-3 px-5 capitalize">
                         {items?.name}

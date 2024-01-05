@@ -18,7 +18,7 @@ const DeleteFeedback = ({ deleteId, closeModal, refreshdata }) => {
 
     const options = {
       method: "DELETE",
-      url: `/api/auth/deletefeedback/${`1213`}`,
+      url: `/api/auth/deletefeedback/${deleteId}`,
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
