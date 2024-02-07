@@ -115,7 +115,7 @@ const AddCategory = ({ closeModal, refreshdata }) => {
         e.preventDefault();
 
         if (formData.file == "" || formData.video.length < 1) {
-            toast.error("Please fill all feilds")
+          return toast.error("Please fill all fields")
         }
         else {
             setLoading(true)
@@ -169,6 +169,7 @@ const AddCategory = ({ closeModal, refreshdata }) => {
                                 placeholder="Enter category name"
                                 className="login-input w-full mt-2 capitalize "
                                 onChange={InputHandler}
+                                
                                 maxLength={64}
                                 required />
                         </div>
@@ -181,6 +182,7 @@ const AddCategory = ({ closeModal, refreshdata }) => {
                                         type="file"
                                         name="file"
                                         disabled={imageDisable}
+                                        required
                                         onChange={InputHandler}
                                         className="w-full bg-cyan-500 hover:bg-cyan-600 "
                                         accept="image/png,image/jpg, image/jpeg , image/*"
@@ -204,6 +206,7 @@ const AddCategory = ({ closeModal, refreshdata }) => {
                                         id="video"
                                         type="file"
                                         name="video"
+                                        required
                                         className="w-full"
                                         onChange={InputHandler}
                                         disabled={videoDisable}

@@ -18,7 +18,7 @@ const DeleteUser = ({ deleteId, closeModal, refreshdata }) => {
 
     const options = {
       method: "DELETE",
-      url: `/api/auth/deletefeedback/${deleteId}`,
+      url: `/api/auth/deleteUser/${deleteId}`,
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -54,6 +54,7 @@ const DeleteUser = ({ deleteId, closeModal, refreshdata }) => {
           Are you sure you want to delete this user ?
         </p>
       </div>
+      
 
       <div className="mt-8">
         <div className="flex justify-between gap-x-5">
